@@ -1,6 +1,8 @@
 # DKBCodeFactory-iOS-Task
 ## Here is the code for a simple application that displays information retrieved from the network. 
 
+### Screen recording of the completed app - https://drive.google.com/file/d/1AsK95f1zP0X1F6apky132AbqqGC0xVg5/view?usp=sharing
+
 ### Time taken to complete the task, including testing - 2hr 30 min
 
 Things done well-
@@ -15,4 +17,3 @@ More things I would have worked on if there was not a time limit-
 1. Writing integration tests to check for successful image download and caching and more in-depth UI tests.
 2. Based on the instructions, I have kept the Entities non-optional. As it wasn't mentioned what values could be nil/optional from the backend, so to save time, I kept all of them as non-optional for now.
 3. Using NSCache(instead of a library) and Coredata for offline storage.
-
