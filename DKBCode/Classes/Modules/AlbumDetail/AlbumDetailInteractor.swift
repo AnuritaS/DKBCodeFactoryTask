@@ -16,12 +16,12 @@ class AlbumDetailInteractor: PresenterToInteractorAlbumDetailProtocol {
     
     //Interactor receives the request from Presenter to get image URl from string
     func getImageUrlFromString() {
-        guard let imageUrlString = self.album?.imageUrl, let url = URL(string: imageUrlString)  else {
+        guard let album = album, let url = URL(string: album.imageUrl)  else {
             return
         }
         var placeholder: UIImage? = nil
         //First, check if we have a cached thumbnail image to use as placeholder
-        ImageCache.default.retrieveImage(forKey: album?.thumbnailUrl ?? "") { result in
+        ImageCache.default.retrieveImage(forKey: album.thumbnailUrl) { result in
             switch result {
             case .success(let value):
                 placeholder = value.image
@@ -30,6 +30,6 @@ class AlbumDetailInteractor: PresenterToInteractorAlbumDetailProtocol {
             }
         }
         //Second, provide the imagedownloader with urlString received from server and the cached thumbnail image
-        self.presenter?.getImageSuccess(title: self.album!.title, imageUrl: url, placeholder: placeholder!)
+        self.presenter?.getImageSuccess(title: album.title, imageUrl: url, placeholder: placeholder)
     }
 }

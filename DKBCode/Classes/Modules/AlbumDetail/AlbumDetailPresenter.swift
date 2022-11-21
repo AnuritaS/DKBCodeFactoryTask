@@ -24,7 +24,7 @@ class AlbumDetailPresenter: ViewToPresenterAlbumDetailProtocol {
 
 extension AlbumDetailPresenter: InteractorToPresenterAlbumDetailProtocol {
 
-    func getImageSuccess(title: String, imageUrl: URL, placeholder: UIImage) {
+    func getImageSuccess(title: String, imageUrl: URL, placeholder: UIImage?) {
         view?.onGetImageSuccess(title, imageUrl, placeholder)
     }
     

@@ -9,7 +9,7 @@ import UIKit
 
 
 protocol PresenterToViewAlbumDetailProtocol: AnyObject {
-    func onGetImageSuccess(_ title: String,_ imageUrl: URL,_ placeholder: UIImage)
+    func onGetImageSuccess(_ title: String,_ imageUrl: URL,_ placeholder: UIImage?)
     func onGetImageFailure(_ title: String)
 }
 
@@ -33,7 +33,7 @@ protocol PresenterToInteractorAlbumDetailProtocol: AnyObject {
 
 
 protocol InteractorToPresenterAlbumDetailProtocol: AnyObject {
-    func getImageSuccess(title: String, imageUrl: URL, placeholder: UIImage)
+    func getImageSuccess(title: String, imageUrl: URL, placeholder: UIImage?)
     func getImageFailure(title: String, error: Error)
 }
 

@@ -37,7 +37,7 @@ class AlbumDetailViewController: UIViewController {
 
 extension AlbumDetailViewController: PresenterToViewAlbumDetailProtocol {
 
-    func onGetImageSuccess(_ title: String,_ imageUrl: URL,_ placeholder: UIImage) {
+    func onGetImageSuccess(_ title: String,_ imageUrl: URL,_ placeholder: UIImage?) {
         titleLabel.text = title
         albumImageView.kf.setImage(with: imageUrl, placeholder: placeholder)
     }

@@ -29,7 +29,7 @@ class AlbumsInteractor: PresenterToInteractorAlbumsProtocol {
             self.presenter?.getAlbumFailure()
             return
         }
-        self.presenter?.getAlbumSuccess(self.albums![index])
+        self.presenter?.getAlbumSuccess(albums[index])
     }
 
 }

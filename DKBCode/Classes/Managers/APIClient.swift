@@ -36,7 +36,7 @@ final class APIClient {
             return
         }
         
-        let urlString = url.absoluteString!
+        let urlString = url.absoluteString ?? ""
         
         Alamofire
             .request(urlString,
@@ -69,7 +69,7 @@ final class APIClient {
             return
         }
         
-        let urlString = url.absoluteString!
+        let urlString = url.absoluteString ?? ""
         
         Alamofire
             .request(urlString,

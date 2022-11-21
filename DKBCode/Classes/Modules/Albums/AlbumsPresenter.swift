@@ -78,7 +78,8 @@ extension AlbumsPresenter: InteractorToPresenterAlbumsProtocol {
     }
     
     func getAlbumSuccess(_ album: Album) {
-        router?.pushToAlbumDetail(on: view!, with: album)
+        guard let view = view else { return }
+        router?.pushToAlbumDetail(on: view, with: album)
     }
     
     func getAlbumFailure() {
