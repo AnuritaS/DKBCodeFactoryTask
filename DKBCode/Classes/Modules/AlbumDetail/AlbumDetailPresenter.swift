@@ -19,7 +19,6 @@ class AlbumDetailPresenter: ViewToPresenterAlbumDetailProtocol {
     func viewDidLoad() {
         interactor?.getImageUrlFromString()
     }
-    
 }
 
 extension AlbumDetailPresenter: InteractorToPresenterAlbumDetailProtocol {
@@ -32,5 +31,4 @@ extension AlbumDetailPresenter: InteractorToPresenterAlbumDetailProtocol {
         print("Loading the image failed with error:", error)
         view?.onGetImageFailure(title)
     }
-    
 }

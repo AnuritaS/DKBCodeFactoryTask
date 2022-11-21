@@ -86,5 +86,4 @@ extension AlbumsPresenter: InteractorToPresenterAlbumsProtocol {
         view?.hideHUD()
         print("Couldn't retrieve album by index")
     }
-    
 }

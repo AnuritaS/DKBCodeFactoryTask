@@ -37,5 +37,4 @@ class AlbumsRouter: PresenterToRouterAlbumsProtocol {
             .pushViewController(AlbumDetailViewController, animated: true)
         
     }
-    
 }

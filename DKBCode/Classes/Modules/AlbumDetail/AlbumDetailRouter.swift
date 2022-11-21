@@ -25,5 +25,4 @@ class AlbumDetailRouter: PresenterToRouterAlbumDetailProtocol {
         
         return viewController
     }
-    
 }
